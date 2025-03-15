@@ -1,0 +1,28 @@
+<h2 mat-dialog-title>Selected Grocery Items</h2>
+
+<div mat-dialog-content>
+  <table mat-table [dataSource]="data.selectedItems">
+    <ng-container matColumnDef="item">
+      <th mat-header-cell *matHeaderCellDef> Item </th>
+      <td mat-cell *matCellDef="let element"> {{ element.item }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="quantity">
+      <th mat-header-cell *matHeaderCellDef> Quantity </th>
+      <td mat-cell *matCellDef="let element"> {{ element.quantity }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="unit">
+      <th mat-header-cell *matHeaderCellDef> Unit </th>
+      <td mat-cell *matCellDef="let element"> {{ element.unit }} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+
+<div mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Close</button>
+  <button mat-raised-button color="primary" mat-dialog-close (click)="createKannadaPDF()">Export to PDF</button>
+</div>

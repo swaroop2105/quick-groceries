@@ -1,0 +1,43 @@
+<mat-toolbar color="primary">
+  <span>Create Grocery List</span>
+</mat-toolbar>
+
+<div class="grocery-container">
+  <h2>Your Grocery List</h2>
+
+  <div class="category-list">
+    <mat-expansion-panel class="spacer" *ngFor="let category of groceryData; let i = index"
+      [expanded]="expandedStates[i]" (opened)="onPanelOpened(i)" (closed)="onPanelClosed(i)">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{ expandedStates[i] ? 'Remove' : 'Add' }} {{ category.categoryName }}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <div *ngFor="let item of category.items; let j = index" class="grocery-item">
+        <mat-checkbox [(ngModel)]="item.checked" (change)="toggleItemSelection(i, j, item.checked)">
+          {{ item.item }}
+        </mat-checkbox>
+
+        <div class="item-details">
+          <mat-form-field *ngIf="item.checked">
+            <mat-label>Quantity</mat-label>
+            <input matInput [(ngModel)]="item.quantity" (ngModelChange)="updateQuantity(i, j, item.quantity)">
+          </mat-form-field>
+
+          <mat-form-field *ngIf="item.checked">
+            <mat-label>Unit</mat-label>
+            <mat-select [(value)]="item.unit" (selectionChange)="updateUnit(i, j, item.unit)">
+              <mat-option *ngFor="let unit of units" [value]="unit">{{ unit }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-expansion-panel>
+  </div>
+</div>
+
+<div class="preview">
+  <button class="preview-button" mat-raised-button color="accent" (click)="openPreview()">Preview Selected
+    Items</button>
+</div>

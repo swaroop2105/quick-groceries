@@ -11,7 +11,7 @@
       <form (ngSubmit)="login()">
         <mat-form-field appearance="fill" class="full-width">
           <mat-label>PIN</mat-label>
-          <input matInput [(ngModel)]="pin" name="pin" type="password" required />
+          <input type="tel" matInput [(ngModel)]="pin" name="pin" type="password" required />
         </mat-form-field>
         <div *ngIf="errorMessage" class="error-message">
           {{ errorMessage }}

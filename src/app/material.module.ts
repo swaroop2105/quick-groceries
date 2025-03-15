@@ -12,6 +12,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatTableModule } from '@angular/material/table';
+import { ClipboardModule } from '@angular/cdk/clipboard';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 const matmodules = [
   CommonModule,
@@ -26,7 +30,11 @@ const matmodules = [
   MatInputModule,
   MatSelectModule,
   MatDialogModule,
-  MatTableModule
+  MatTableModule,
+  ClipboardModule,
+  MatIconModule,
+  MatTooltipModule,
+  MatSnackBarModule
 ]
 
 

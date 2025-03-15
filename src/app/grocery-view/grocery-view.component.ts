@@ -3,15 +3,16 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { PDFDocument } from 'pdf-lib';
 import fontkit from '@pdf-lib/fontkit';
 import { rgb } from 'pdf-lib';
+import { Clipboard } from '@angular/cdk/clipboard';
+import { MatSnackBar } from '@angular/material/snack-bar';
 @Component({
   selector: 'app-grocery-view',
   templateUrl: './grocery-view.component.html',
   styleUrls: ['./grocery-view.component.scss']
 })
 export class GroceryViewComponent {
-  displayedColumns: string[] = ['item', 'quantity', 'unit'];
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any) {
-    console.log(data);
+  displayedColumns: string[] = ['slno', 'item', 'quantity'];
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any, private clipboard: Clipboard, private snackbar: MatSnackBar) {
 
   }
 
@@ -24,24 +25,38 @@ export class GroceryViewComponent {
     const pdfDoc = await PDFDocument.create();
 
     pdfDoc.registerFontkit(fontkit)
+
+
     // Embed the font into the document
     const font = await pdfDoc.embedFont(fontBytes);
 
     const page = pdfDoc.addPage();
     const { width, height } = page.getSize();
 
+
+
     // Define table content: headers
     const table = [
-      ['Item', 'Quantity', 'Amount'],
-      ...this.data.selectedItems.map((item: any) => [item.item, `${item.quantity} ${item.unit}`, ''])
+      ['SL No', 'Item', 'Quantity'],
+      ...this.data.selectedItems.map((item: any, i: any) => [`${i + 1}`, item.item, `${item.quantity} ${item.unit}`])
     ];
 
     // Table positioning
     const tableStartX = 50;
-    let tableStartY = height - 100; // Start a little lower from the top
+    let tableStartY = height - 100; // Start a little lower from the top, leaving space for the date
     const rowHeight = 20;
-    const columnWidths = [300, 100, 100];  // Adjust column widths
+    const columnWidths = [50, 300, 150];  // Adjust column widths
     const padding = 5;
+
+    // Draw date and time at the top
+    page.drawText(`Date and Time: ${this.getFormattedDate()}`, {
+      x: tableStartX,
+      y: height - 40, // Position for the date and time text
+      font: font,
+      size: 12,
+      color: rgb(0, 0, 0)
+    });
+
     // Draw table headers
     table[0].forEach((header: any, index: any) => {
       page.drawText(header, {
@@ -90,8 +105,52 @@ export class GroceryViewComponent {
     // Create a download link for the PDF
     const link = document.createElement('a');
     link.href = URL.createObjectURL(new Blob([pdfBytes], { type: 'application/pdf' }));
-    const date = Date.now()
-    link.download = `Grocery-${date}`;
+    const date = Date.now();
+    link.download = `Grocery-${this.getFormattedDate()}`;
     link.click();
+  }
+
+
+  copyTableData() {
+    let copiedText = '';
+
+    copiedText += this.getFormattedDate() + '\n'
+
+    // Add table data
+    this.data.selectedItems.forEach((item: any, i: any) => {
+      this.displayedColumns.forEach(col => {
+        if (col === 'slno') {
+
+        }
+        else if (col === 'quantity') {
+          copiedText += item[col] + item['unit'];
+        }
+        else {
+          copiedText += item[col] + ' - ';
+        }
+      });
+      copiedText += '\n'; // new line
+    });
+
+    // Copy the formatted text to the clipboard
+    this.clipboard.copy(copiedText);
+
+    this.snackbar.open('Copied to clipboard!', 'Ok', {
+      duration: 2000
+    })
+  }
+
+
+  getFormattedDate() {
+    // Get the current date and time
+    const currentDate = new Date();
+
+    // Format the date as dd/MM/yyyy
+    const day = String(currentDate.getDate()).padStart(2, '0'); // Pad day with leading zero if needed
+    const month = String(currentDate.getMonth() + 1).padStart(2, '0'); // Pad month with leading zero, months are 0-indexed
+    const year = currentDate.getFullYear();
+
+    const formattedDate = `${day}/${month}/${year}-${currentDate.toLocaleTimeString()}`;
+    return formattedDate
   }
 }

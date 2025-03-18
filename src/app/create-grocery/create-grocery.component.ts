@@ -11,7 +11,7 @@ import { GroceryViewComponent } from '../grocery-view/grocery-view.component';
 })
 export class CreateGroceryComponent {
   groceryData: any = [];
-  units = ['kg', 'grams', 'liters', 'pieces'];
+  units = ['kg', 'grams', 'liters', 'piece', 'bottle', 'bundle', 'pack', 'liter'];
   expandedStates: boolean[] = []; // Track expanded state for each panel
 
   constructor(private http: HttpClient, public dialog: MatDialog) {

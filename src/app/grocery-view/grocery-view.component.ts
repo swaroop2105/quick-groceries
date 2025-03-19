@@ -17,23 +17,16 @@ export class GroceryViewComponent {
   }
 
   async createKannadaPDF() {
-
     const fontBytes = await fetch('assets/NotoSansKannada-Regular.ttf')
       .then(res => res.arrayBuffer());
 
     // Create a new PDF document
     const pdfDoc = await PDFDocument.create();
 
-    pdfDoc.registerFontkit(fontkit)
-
+    pdfDoc.registerFontkit(fontkit);
 
     // Embed the font into the document
     const font = await pdfDoc.embedFont(fontBytes);
-
-    const page = pdfDoc.addPage();
-    const { width, height } = page.getSize();
-
-
 
     // Define table content: headers
     const table = [
@@ -41,12 +34,17 @@ export class GroceryViewComponent {
       ...this.data.selectedItems.map((item: any, i: any) => [`${i + 1}`, item.item, `${item.quantity} ${item.unit}`])
     ];
 
-    // Table positioning
-    const tableStartX = 50;
-    let tableStartY = height - 100; // Start a little lower from the top, leaving space for the date
     const rowHeight = 20;
     const columnWidths = [50, 300, 150];  // Adjust column widths
     const padding = 5;
+
+    // Table positioning
+    let tableStartX = 50;
+    let tableStartY = 750; // Start a little lower from the top, leaving space for the date
+    const pageHeight = 750;  // Typical page height
+    const pageMarginBottom = 50; // Space from the bottom to avoid clipping
+    let page = pdfDoc.addPage();
+    const { width, height } = page.getSize();
 
     // Draw date and time at the top
     page.drawText(`Date and Time: ${this.getFormattedDate()}`, {
@@ -60,7 +58,7 @@ export class GroceryViewComponent {
     // Draw table headers
     table[0].forEach((header: any, index: any) => {
       page.drawText(header, {
-        x: tableStartX + columnWidths.slice(0, index).reduce((a, b) => a + b, 0) + padding, // X position for each column
+        x: tableStartX + columnWidths.slice(0, index).reduce((a, b) => a + b, 0) + padding,
         y: tableStartY,
         font: font,
         size: 12,
@@ -70,15 +68,19 @@ export class GroceryViewComponent {
 
     // Draw the rows
     for (let i = 1; i < table.length; i++) {
+      if (tableStartY - rowHeight < pageMarginBottom) {
+        // If there's no enough space left on the current page, add a new one
+        tableStartY = 750;
+        page = pdfDoc.addPage();  // Add new page
+      }
+
       tableStartY -= rowHeight;  // Move to the next row
       const row = table[i];
 
-      // Draw each cell in the row
       row.forEach((cell: any, index: any) => {
-        const xPos = tableStartX + columnWidths.slice(0, index).reduce((a, b) => a + b, 0) + padding;  // X position for each column
+        const xPos = tableStartX + columnWidths.slice(0, index).reduce((a, b) => a + b, 0) + padding;
         const yPos = tableStartY;
 
-        // Draw the text in each cell
         page.drawText(cell, {
           x: xPos,
           y: yPos,
@@ -114,7 +116,7 @@ export class GroceryViewComponent {
   copyTableData() {
     let copiedText = '';
 
-    copiedText += this.getFormattedDate() + '\n'
+    // copiedText += this.getFormattedDate() + '\n'
 
     // Add table data
     this.data.selectedItems.forEach((item: any, i: any) => {
@@ -126,7 +128,7 @@ export class GroceryViewComponent {
           copiedText += item[col] + item['unit'];
         }
         else {
-          copiedText += item[col] + ' - ';
+          copiedText += `${i + 1}. ` + item[col] + ' - ';
         }
       });
       copiedText += '\n'; // new line
@@ -150,7 +152,13 @@ export class GroceryViewComponent {
     const month = String(currentDate.getMonth() + 1).padStart(2, '0'); // Pad month with leading zero, months are 0-indexed
     const year = currentDate.getFullYear();
 
-    const formattedDate = `${day}/${month}/${year}-${currentDate.toLocaleTimeString()}`;
+    const timeString = currentDate.toLocaleTimeString([], {
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: true
+    });
+
+    const formattedDate = `${day}/${month}/${year}-${timeString}`;
     return formattedDate
   }
 }

@@ -4,8 +4,8 @@
       "categoryName": "Grains",
       "items": [
         {
-          "item": "ಅಕ್ಕಿ",
-          "quantity": "5",
+          "item": "ಕುಚ್ಚಲಕ್ಕಿ",
+          "quantity": "10",
           "unit": "kg",
           "checked": false
         },
@@ -16,21 +16,128 @@
           "checked": false
         },
         {
-          "item": "ಚೋರಣೆ",
+          "item": "ಇಡ್ಲಿ ಅಕ್ಕಿ",
+          "quantity": "5",
+          "unit": "kg",
+          "checked": false
+        },
+        {
+          "item": "ಬಾಸ್ಮತಿ ಅಕ್ಕಿ",
+          "quantity": "2",
+          "unit": "kg",
+          "checked": false
+        },
+        {
+          "item": "ಮೈದಾ",
+          "quantity": "500",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ಬಾಂಬೆ ರವೆ",
+          "quantity": "500",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ರಾಗಿ ಹಿಟ್ಟು",
+          "quantity": "500",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ಅಕ್ಕಿ ಹಿಟ್ಟು",
           "quantity": "1",
           "unit": "kg",
           "checked": false
         },
         {
-          "item": "ಬಸ್ಮತಿ ಅಕ್ಕಿ",
+          "item": "ಅವಲಕ್ಕಿ",
+          "quantity": "500",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ಸಾಬುಧಾನಾ",
+          "quantity": "500",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ಕಡಲೆ ಹಿಟ್ಟು",
+          "quantity": "250",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "MTR ಶ್ಯಾವಿಗೆ",
+          "quantity": "500",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ಸಕ್ಕರೆ",
           "quantity": "1",
           "unit": "kg",
           "checked": false
         },
         {
-          "item": "ಮಕ್ಕಿ ಹಿಟ್ಟು",
+          "item": "ಬೆಲ್ಲ",
+          "quantity": "250",
+          "unit": "grams",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "categoryName": "Legumes & Pulses",
+      "items": [
+        {
+          "item": "ಉದ್ದಿನ ಬೇಳೆ",
+          "quantity": "2",
+          "unit": "kg",
+          "checked": false
+        },
+        {
+          "item": "ತೊಗರಿ ಬೇಳೆ",
           "quantity": "1",
           "unit": "kg",
+          "checked": false
+        },
+        {
+          "item": "ಹೆಸರು ಬೇಳೆ",
+          "quantity": "1",
+          "unit": "kg",
+          "checked": false
+        },
+        {
+          "item": "ಚನ್ನಾ ಬೇಳೆ",
+          "quantity": "500",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ಕಡಲೆ",
+          "quantity": "500",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ಒಣಗಿದ ಹಸಿರು ಬಟಾಣಿ",
+          "quantity": "500",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ಹೆಸರು ಬೇಳೆ",
+          "quantity": "250",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ಕರಿ ಕಡಲೆ",
+          "quantity": "250",
+          "unit": "grams",
           "checked": false
         }
       ]
@@ -45,33 +152,331 @@
           "checked": false
         },
         {
-          "item": "ಜೀರಾ",
+          "item": "ಉಪ್ಪು",
+          "quantity": "1",
+          "unit": "kg",
+          "checked": false
+        },
+        {
+          "item": "ಕ್ರಿಸ್ಟಲ್ ಸಾಲ್ಟ್",
+          "quantity": "1",
+          "unit": "kg",
+          "checked": false
+        },
+        {
+          "item": "ಹುಣಸೆಹಣ್ಣು",
+          "quantity": "250",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ಇಂಗು",
+          "quantity": "100",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ಒಣ ಕೆಂಪು ಮೆಣಸಿನಕಾಯಿ",
+          "quantity": "250",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ಸಾಸಿವೆ",
+          "quantity": "100",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ಜೀರಿಗೆ",
+          "quantity": "100",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ಫೆನ್ನೆಲ್ ಬೀಜಗಳು",
+          "quantity": "100",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ಮೆಂತ್ಯ ಬೀಜಗಳು",
+          "quantity": "100",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ಕಾಳುಮೆಣಸು",
+          "quantity": "100",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ಗಸಗಸೆ ಬೀಜಗಳು",
           "quantity": "50",
           "unit": "grams",
           "checked": false
         },
         {
-          "item": "ಹಿಂಗು",
+          "item": "ಬಿಳಿ ಎಳ್ಳು",
           "quantity": "50",
           "unit": "grams",
           "checked": false
         },
         {
-          "item": "ಮೈಥಿ",
+          "item": "ಒಣ ಶುಂಠಿ",
           "quantity": "50",
           "unit": "grams",
           "checked": false
         },
         {
-          "item": "ಕೊತ್ತಂಬರಿ ಸೊಪ್ಪು",
+          "item": "ಏಲಕ್ಕಿ",
+          "quantity": "25",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ದಾಲ್ಚಿನ್ನಿ",
+          "quantity": "25",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ಸ್ಟಾರ್ ಅನೈಸ್",
           "quantity": "50",
           "unit": "grams",
           "checked": false
         },
         {
-          "item": "ದಾಳಚಿನ್ನ",
+          "item": "ಲವಂಗ",
           "quantity": "50",
           "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ಬೇ ಎಲೆ",
+          "quantity": "20",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ಪಾಪಡ್ ಮತ್ತು ವಡಗಮ್ಗಳು",
+          "quantity": "1",
+          "unit": "pack",
+          "checked": false
+        },
+        {
+          "item": "ಉಪ್ಪಿನಕಾಯಿ",
+          "quantity": "200",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ಶುಂಠಿ ಬೆಳ್ಳುಳ್ಳಿ ಪೇಸ್ಟ್",
+          "quantity": "1",
+          "unit": "pack",
+          "checked": false
+        },
+        {
+          "item": "ಅರಿಶಿನ ಪುಡಿ",
+          "quantity": "100",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ಸಾಂಬಾರ್ ಪುಡಿ",
+          "quantity": "100",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ಚಿಕನ್ ಮಸಾಲ",
+          "quantity": "100",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ಕೆಂಪು ಮೆಣಸಿನ ಪುಡಿ",
+          "quantity": "200",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ಕೊತ್ತಂಬರಿ ಪುಡಿ",
+          "quantity": "200",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ಗರಂ ಮಸಾಲಾ ಪುಡಿ",
+          "quantity": "100",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ಕಪ್ಪು ಮೆಣಸಿನ ಪುಡಿ",
+          "quantity": "50",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ಜೀರಿಗೆ ಪುಡಿ",
+          "quantity": "50",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ರಸಂ ಪುಡಿ",
+          "quantity": "100",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ಸೋಯಾ ಸಾಸ್",
+          "quantity": "1",
+          "unit": "bottle",
+          "checked": false
+        },
+        {
+          "item": "ಟೊಮೆಟೊ ಕೆಚಪ್",
+          "quantity": "1",
+          "unit": "bottle",
+          "checked": false
+        },
+        {
+          "item": "ಚಿಲ್ಲಿ ಸಾಸ್",
+          "quantity": "1",
+          "unit": "bottle",
+          "checked": false
+        },
+        {
+          "item": "ವಿನೆಗರ್",
+          "quantity": "1",
+          "unit": "bottle",
+          "checked": false
+        },
+        {
+          "item": "ಜಾಮ್",
+          "quantity": "1",
+          "unit": "bottle",
+          "checked": false
+        },
+        {
+          "item": "ಜೇನುತುಪ್ಪ",
+          "quantity": "1",
+          "unit": "bottle",
+          "checked": false
+        },
+        {
+          "item": "ಅಡುಗೆ ಸೋಡಾ",
+          "quantity": "100",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ಬೇಕಿಂಗ್ ಪೌಡರ್",
+          "quantity": "100",
+          "unit": "grams",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "categoryName": "Dry Fruits",
+      "items": [
+        {
+          "item": "ಗೋಡಂಬಿ",
+          "quantity": "250",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ಒಣದ್ರಾಕ್ಷಿ",
+          "quantity": "250",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ಬಾದಾಮಿ",
+          "quantity": "250",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ಖರ್ಜೂರ",
+          "quantity": "250",
+          "unit": "grams",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "categoryName": "Cleaning Products",
+      "items": [
+        {
+          "item": "ವಿಮ್ ಬಾರ್ ಟಬ್",
+          "quantity": "1",
+          "unit": "piece",
+          "checked": false
+        },
+        {
+          "item": "ಲಕ್ಸ್ ಸೋಪ್",
+          "quantity": "6",
+          "unit": "pack",
+          "checked": false
+        },
+        {
+          "item": "ಡೆಟಾಲ್",
+          "quantity": "1",
+          "unit": "bottle",
+          "checked": false
+        },
+        {
+          "item": "ಬ್ಲೀಚ್ (ಬಿಳಿ ಬಟ್ಟೆಗಳಿಗೆ)",
+          "quantity": "1",
+          "unit": "bottle",
+          "checked": false
+        },
+        {
+          "item": "ಫ್ಲೋರ್ ಕ್ಲೀನರ್",
+          "quantity": "1",
+          "unit": "bottle",
+          "checked": false
+        },
+        {
+          "item": "ಗ್ಲಾಸ್ ಕ್ಲೀನರ್",
+          "quantity": "1",
+          "unit": "bottle",
+          "checked": false
+        },
+        {
+          "item": "ರೂಮ್ ಸ್ಪ್ರೇ",
+          "quantity": "1",
+          "unit": "bottle",
+          "checked": false
+        },
+        {
+          "item": "ಹಾರ್ಪಿಕ್",
+          "quantity": "1",
+          "unit": "bottle",
+          "checked": false
+        },
+        {
+          "item": "ಏರ್ ಫ್ರೆಶ್ನರ್",
+          "quantity": "1",
+          "unit": "pack",
+          "checked": false
+        },
+        {
+          "item": "ಹಾರ್ಪಿಕ್ ಮಾತ್ರೆಗಳು",
+          "quantity": "1",
+          "unit": "pack",
+          "checked": false
+        },
+        {
+          "item": "ಕಸದ ಚೀಲಗಳು",
+          "quantity": "2",
+          "unit": "pack",
           "checked": false
         }
       ]
@@ -80,31 +485,85 @@
       "categoryName": "Vegetables",
       "items": [
         {
-          "item": "ಹುರುಳಿಕಾಯಿ",
+          "item": "ಬೀನ್ಸ್",
           "quantity": "1",
           "unit": "kg",
           "checked": false
         },
         {
-          "item": "ಬಾಯರು",
-          "quantity": "500",
-          "unit": "grams",
+          "item": "ಈರುಳ್ಳಿ",
+          "quantity": "4",
+          "unit": "kg",
           "checked": false
         },
         {
-          "item": "ಬಾತಾಳಿ",
+          "item": "ಟೊಮೆಟೊ",
+          "quantity": "2",
+          "unit": "kg",
+          "checked": false
+        },
+        {
+          "item": "ಸಣ್ಣ ಈರುಳ್ಳಿ",
           "quantity": "1",
           "unit": "kg",
           "checked": false
         },
         {
-          "item": "ಶಂಗರಿ",
+          "item": "ಬೆಳ್ಳುಳ್ಳಿ",
           "quantity": "500",
           "unit": "grams",
           "checked": false
         },
         {
-          "item": "ಟೊಮ್ಯಾಟೋ",
+          "item": "ಶುಂಠಿ",
+          "quantity": "500",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ಹಸಿರು ಮೆಣಸಿನಕಾಯಿ",
+          "quantity": "100",
+          "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ಆಲೂಗಡ್ಡೆ",
+          "quantity": "1",
+          "unit": "kg",
+          "checked": false
+        },
+        {
+          "item": "ನಿಂಬೆಹಣ್ಣು",
+          "quantity": "5",
+          "unit": "",
+          "checked": false
+        },
+        {
+          "item": "ಕೊತ್ತಂಬರಿ ಸೊಪ್ಪು",
+          "quantity": "1",
+          "unit": "bundle",
+          "checked": false
+        },
+        {
+          "item": "ಪುದೀನ ಎಲೆಗಳು",
+          "quantity": "1",
+          "unit": "bundle",
+          "checked": false
+        },
+        {
+          "item": "ಕರಿಬೇವು",
+          "quantity": "1",
+          "unit": "bundle",
+          "checked": false
+        },
+        {
+          "item": "ತೆಂಗಿನಕಾಯಿ",
+          "quantity": "2",
+          "unit": "piece",
+          "checked": false
+        },
+        {
+          "item": "ಕ್ಯಾರೆಟ್",
           "quantity": "500",
           "unit": "grams",
           "checked": false
@@ -121,33 +580,15 @@
       "categoryName": "Fruits",
       "items": [
         {
-          "item": "ಊಟಕ್ಕಾಲು ಹಣ್ಣು",
-          "quantity": "500",
-          "unit": "grams",
-          "checked": false
-        },
-        {
           "item": "ಬಾಳೆಹಣ್ಣು",
           "quantity": "6",
-          "unit": "pieces",
+          "unit": "piece",
           "checked": false
         },
         {
           "item": "ಸೇಬು",
           "quantity": "500",
           "unit": "grams",
-          "checked": false
-        },
-        {
-          "item": "ಹಲೋ",
-          "quantity": "2",
-          "unit": "pieces",
-          "checked": false
-        },
-        {
-          "item": "ನಿಂಬೆಹಣ್ಣು",
-          "quantity": "6",
-          "unit": "pieces",
           "checked": false
         }
       ]
@@ -158,31 +599,31 @@
         {
           "item": "ಹಾಲು",
           "quantity": "2",
-          "unit": "liters",
-          "checked": false
-        },
-        {
-          "item": "ತೈಲ್",
-          "quantity": "500",
-          "unit": "ml",
+          "unit": "liter",
           "checked": false
         },
         {
           "item": "ಬೆಣ್ಣೆ",
-          "quantity": "250",
-          "unit": "grams",
-          "checked": false
-        },
-        {
-          "item": "ಪಾಲು ಪುಡಿ",
           "quantity": "200",
           "unit": "grams",
           "checked": false
         },
         {
-          "item": "ಚೀಜ್",
+          "item": "ಪನೀರ್",
           "quantity": "200",
           "unit": "grams",
+          "checked": false
+        },
+        {
+          "item": "ಮೊಸರು",
+          "quantity": "0.5",
+          "unit": "liter",
+          "checked": false
+        },
+        {
+          "item": "ಹಾಲು",
+          "quantity": "1",
+          "unit": "liter",
           "checked": false
         }
       ]
@@ -191,73 +632,9 @@
       "categoryName": "Oils & Fats",
       "items": [
         {
-          "item": "ಎಲೆಝ್",
-          "quantity": "1",
-          "unit": "liters",
-          "checked": false
-        },
-        {
-          "item": "ನೋಡ್ಲು",
-          "quantity": "500",
-          "unit": "grams",
-          "checked": false
-        },
-        {
           "item": "ತೆಂಗಿನ ಎಣ್ಣೆ",
           "quantity": "1",
-          "unit": "liters",
-          "checked": false
-        }
-      ]
-    },
-    {
-      "categoryName": "Legumes & Pulses",
-      "items": [
-        {
-          "item": "ದಾಳ್",
-          "quantity": "1",
-          "unit": "kg",
-          "checked": false
-        },
-        {
-          "item": "ರಾಜ್ಮಾ",
-          "quantity": "500",
-          "unit": "grams",
-          "checked": false
-        },
-        {
-          "item": "ಚಣಾಕಾಳು",
-          "quantity": "500",
-          "unit": "grams",
-          "checked": false
-        },
-        {
-          "item": "ತಳೊಣ್ಣೆ",
-          "quantity": "500",
-          "unit": "grams",
-          "checked": false
-        }
-      ]
-    },
-    {
-      "categoryName": "Snacks & Sweets",
-      "items": [
-        {
-          "item": "ಚಾಕ್ಲೆಟ್",
-          "quantity": "100",
-          "unit": "grams",
-          "checked": false
-        },
-        {
-          "item": "ಪಾವ್",
-          "quantity": "10",
-          "unit": "pieces",
-          "checked": false
-        },
-        {
-          "item": "ಗಜಕ",
-          "quantity": "250",
-          "unit": "grams",
+          "unit": "liter",
           "checked": false
         }
       ]
@@ -273,47 +650,12 @@
         },
         {
           "item": "ಕಾಫಿ ಪುಡಿ",
-          "quantity": "100",
-          "unit": "grams",
+          "quantity": "10 (Nescafe 5RS)",
+          "unit": "pack",
           "checked": false
         },
         {
-          "item": "ಚಹಾ ಪುಡಿ",
-          "quantity": "100",
-          "unit": "grams",
-          "checked": false
-        },
-        {
-          "item": "ಚಹಾ",
-          "quantity": "500",
-          "unit": "ml",
-          "checked": false
-        }
-      ]
-    },
-    {
-      "categoryName": "Household Items",
-      "items": [
-        {
-          "item": "ಸಾಫ್ಟನರ್",
-          "quantity": "1",
-          "unit": "liters",
-          "checked": false
-        },
-        {
-          "item": "ಹ್ಯಾಂಡ್ ವಾಷ್",
-          "quantity": "250",
-          "unit": "ml",
-          "checked": false
-        },
-        {
-          "item": "ವ್ಯಾಸ",
-          "quantity": "5",
-          "unit": "pieces",
-          "checked": false
-        },
-        {
-          "item": "ಲವಣ",
+          "item": "ಹಾರ್ಲಿಕ್ಸ್",
           "quantity": "500",
           "unit": "grams",
           "checked": false
